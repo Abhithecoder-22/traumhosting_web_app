@@ -646,7 +646,7 @@ a:focus {
 
 .price_section .price_container .box .detail-box {
   width: 300px;
-  padding: 40px 20px 15px 20px;
+  /* padding: 40px 20px 15px 20px; */
   background-color: #fff;
   border-radius: 25px;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
@@ -663,7 +663,7 @@ a:focus {
 
 .price_section .price_container .box .detail-box h6 {
   text-transform: uppercase;
-  color: #03a7d3;
+  /* color: #03a7d3; */
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -671,6 +671,7 @@ a:focus {
 .price_section .price_container .box .price_features {
   padding: 0;
   list-style-type: none;
+  padding: 20px;
 }
 
 .price_section .price_container .box .price_features li {
@@ -699,25 +700,25 @@ a:focus {
 }
 
 .price_section .price_container .box .btn-box a:hover {
-  background-color: #03a7d3;
-  color: #ffffff;
+  /* background-color: #03a7d3; */
+  /* color: #ffffff; */
 }
 
 .price_section .price_container .box:hover {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .price_section .price_container .box:hover .detail-box {
-  background-color: #03a7d3;
+  /* background-color: #03a7d3; */
 }
 
 .price_section .price_container .box:hover h6 {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .price_section .price_container .box:hover a {
-  background-color: #03a7d3;
-  color: #ffffff;
+  /* background-color: #03a7d3; */
+  /* color: #ffffff; */
 }
 
 .client_section {

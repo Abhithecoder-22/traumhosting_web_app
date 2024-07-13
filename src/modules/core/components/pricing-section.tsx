@@ -76,10 +76,12 @@ const PriceSection = () => {
                                 <li><i className="fas fa-check"></i> DDoS Protection</li>
                                 <li><i className="fas fa-check"></i> Full Root Access</li>
                                 <li><i className="fas fa-check"></i> 24/7/365 Tech Support</li>
+                                <Button variant='default' className='w-full' >See Detail</Button>
                             </ul>
+                            
                         </div>
                         <div className="btn-box">
-                            <Button variant='default'>See Detail</Button>
+                            
 
                             {/* <a href="">See Detail</a> */}
                         </div>
@@ -110,11 +112,10 @@ const PriceSection = () => {
                                 <li><i className="fas fa-check"></i> DDoS Protection</li>
                                 <li><i className="fas fa-check"></i> Full Root Access</li>
                                 <li><i className="fas fa-check"></i> 24/7/365 Tech Support</li>
+                                <Button variant='default' className='w-full' >See Detail</Button>
                             </ul>
                         </div>
-                        <div className="btn-box">
-                            <Button variant='default'>See Detail</Button>
-                        </div>
+                   
                     </div>
                     <div className="box">
                         <div className="detail-box">
@@ -142,11 +143,10 @@ const PriceSection = () => {
                                 <li><i className="fas fa-check"></i> DDoS Protection</li>
                                 <li><i className="fas fa-check"></i> Full Root Access</li>
                                 <li><i className="fas fa-check"></i> 24/7/365 Tech Support</li>
+                                <Button variant='default' className='w-full' >See Detail</Button>
                             </ul>
                         </div>
-                        <div className="btn-box">
-                            <Button variant='default'>See Detail</Button>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
