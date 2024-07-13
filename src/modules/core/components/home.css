@@ -44,7 +44,7 @@
     margin-left: 2rem;
   }
   
-  .container {
+  .container-why {
     height: 600px;
     padding: 20px;
     margin-left: 40px;
@@ -56,10 +56,10 @@
     gap: 40px;
   }
   
-  .container img {
+  /* .container img {
     width: 55%;
     height: 500px;
-  }
+  } */
   
   .hero-text {
     width: 80%;
@@ -485,7 +485,7 @@
 
 
 
-header {
+.feature-header {
   background: #0f0f6d;
   width: 100%;
   height: 100px;
@@ -494,6 +494,9 @@ header {
 .main-title {
   color: #fff;
   line-height: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 
 a,
@@ -630,10 +633,7 @@ svg {
   padding: 20px;
 }
 
-.main-title {
-  text-align: center;
-  margin-bottom: 20px;
-}
+
 
 .title {
   font-size: 2em;
@@ -1122,6 +1122,45 @@ body {
       display: table;
     }
   }
+
+  .pricing-divider-img {
+    position: absolute;
+    bottom: -30px;
+    left: -5px;
+    width: 100%;
+    height: auto;
+  }
+
+  .col-text-width{
+    width: 70%;
+    max-width: 70%;
+    flex: 0 0 70%;
+  }
+  .col-img-width{
+    width: 30%;
+    max-width: 30%;
+    flex: 0 0 30%;
+  }
+
+  @media (max-width:800px){
+    .col-text-width{
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+    .col-img-width{
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+
+  .custom-header-img-width{
+    width: 2500px;
+    inline-size: 100%;
+  }
+  
   
 
 

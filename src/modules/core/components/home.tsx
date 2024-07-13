@@ -1,77 +1,82 @@
-import React, {  useState } from 'react';
+import  {  useState } from 'react';
 import './home.css';
-import { NavigationMenuDemo } from './header';
+// import { NavigationMenuDemo } from './header';
+import Hero from './hero';
+import Footer from './footer';
+import PriceSection from './pricing-section';
+import ServiceSection from './service-section';
+import AboutSection from './about';
 
 
-interface CardProps {
-  logo: string;
-  title: string;
-  subTitle: string;
-  description: string;
-}
+// interface CardProps {
+//   logo: string;
+//   title: string;
+//   subTitle: string;
+//   description: string;
+// }
 
-interface Option {
-  name: string;
-  description: string;
-  features: string[];
-}
+// interface Option {
+//   name: string;
+//   description: string;
+//   features: string[];
+// }
 
-const data: CardProps[] = [
-  {
-    logo: "https://imgpile.com/images/uBmLxP.png",
-    title: "Maximum Security",
-    subTitle: "",
-    description: "We use top security measures like auto-updates on web apps, FREE SSL, hack protection, custom firewall, and DDoS protection to keep your websites safe in our Managed Cloud Hosting/ Support Packages.",
-  },
-  {
-    logo: "https://imgpile.com/images/uBmq0N.png",
-    title: "Maximum Performance",
-    subTitle: "",
-    description: "With our high-performance, high-end servers including shared hosting, Reseller Hosting, WordPress Hosting, Windows Hosting, We ensure the better performance and response from our servers.",
-  },
-  {
-    logo: "https://imgpile.com/images/uBmAnW.png",
-    title: "Advanced Functionality of Cloud vps Hosting",
-    subTitle: "",
-    description: "We make it extremely easy to manage a cloud VPS, All Cloud VPS hosting plans come with a graphical user interface and a selection of control panels, all accessible through a web browser.",
-  },
-  {
-    logo: "https://imgpile.com/images/uBmzdE.png",
-    title: "Ultimate Speed",
-    subTitle: "",
-    description: "Google values user experience and users like the fast speed. So we use the best technologies and methodologies to boost up your site speed without affecting the stability. Our testing department and periodical updates ensures the fastest loading speed across all devices with the help of our quality virtual server hosting plans.",
-  },
-  {
-    logo: "https://imgpile.com/images/uBmOq1.png",
-    title: "High Availability",
-    subTitle: "",
-    description: "Downtime can be dangerous for your business. There are any instances where you need more resources instantly. Our best vps hosting plans come with high resource availability speeds up your site and promise steady performance even during fluctuations. With us your site will go on and on and on.....No matter what!",
-  },
-  {
-    logo: "https://imgpile.com/images/uBm8rr.png",
-    title: "24/7 Live Support",
-    subTitle: "",
-    description: "Our support staff is available 24/7/365 to assist you via Telephone, LiveChat, or Email with any hosting-related issues in our Managed Cloud Hosting/ Support Packages.",
-  },
+// const data: CardProps[] = [
+//   {
+//     logo: "https://imgpile.com/images/uBmLxP.png",
+//     title: "Maximum Security",
+//     subTitle: "",
+//     description: "We use top security measures like auto-updates on web apps, FREE SSL, hack protection, custom firewall, and DDoS protection to keep your websites safe in our Managed Cloud Hosting/ Support Packages.",
+//   },
+//   {
+//     logo: "https://imgpile.com/images/uBmq0N.png",
+//     title: "Maximum Performance",
+//     subTitle: "",
+//     description: "With our high-performance, high-end servers including shared hosting, Reseller Hosting, WordPress Hosting, Windows Hosting, We ensure the better performance and response from our servers.",
+//   },
+//   {
+//     logo: "https://imgpile.com/images/uBmAnW.png",
+//     title: "Advanced Functionality of Cloud vps Hosting",
+//     subTitle: "",
+//     description: "We make it extremely easy to manage a cloud VPS, All Cloud VPS hosting plans come with a graphical user interface and a selection of control panels, all accessible through a web browser.",
+//   },
+//   {
+//     logo: "https://imgpile.com/images/uBmzdE.png",
+//     title: "Ultimate Speed",
+//     subTitle: "",
+//     description: "Google values user experience and users like the fast speed. So we use the best technologies and methodologies to boost up your site speed without affecting the stability. Our testing department and periodical updates ensures the fastest loading speed across all devices with the help of our quality virtual server hosting plans.",
+//   },
+//   {
+//     logo: "https://imgpile.com/images/uBmOq1.png",
+//     title: "High Availability",
+//     subTitle: "",
+//     description: "Downtime can be dangerous for your business. There are any instances where you need more resources instantly. Our best vps hosting plans come with high resource availability speeds up your site and promise steady performance even during fluctuations. With us your site will go on and on and on.....No matter what!",
+//   },
+//   {
+//     logo: "https://imgpile.com/images/uBm8rr.png",
+//     title: "24/7 Live Support",
+//     subTitle: "",
+//     description: "Our support staff is available 24/7/365 to assist you via Telephone, LiveChat, or Email with any hosting-related issues in our Managed Cloud Hosting/ Support Packages.",
+//   },
  
 
-];
+// ];
 
 
-const Card: React.FC<CardProps> = ({ logo, title, subTitle, description }) => (
-  <div className="eachCard">
-    <div className="cardContent">
-      <div className="cardImage">
-        <img src={logo} alt={`${title}-logo`} />
-      </div>
-      <div className="cardInfo">
-        <h2 className="cardTitle">{title}</h2>
-        <span className="cardSubTitle">{subTitle}</span>
-        <p className="cardText">{description}</p>
-      </div>
-    </div>
-  </div>
-);
+// const Card: React.FC<CardProps> = ({ logo, title, subTitle, description }) => (
+//   <div className="eachCard">
+//     <div className="cardContent">
+//       <div className="cardImage">
+//         <img src={logo} alt={`${title}-logo`} />
+//       </div>
+//       <div className="cardInfo">
+//         <h2 className="cardTitle">{title}</h2>
+//         <span className="cardSubTitle">{subTitle}</span>
+//         <p className="cardText">{description}</p>
+//       </div>
+//     </div>
+//   </div>
+// );
 
 const faqData = [
   {
@@ -127,7 +132,8 @@ const faqData = [
 const Home = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleOpen = (index: any) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const toggleOpen = (index: any ) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -162,44 +168,44 @@ const Home = () => {
 
   const currentOption = options.find(option => option.name === selectedOption);
 
-  interface DataCentre {
-    country: string;
-    image: string;
-    position: { top: string; left: string };
-  }
+  // interface DataCentre {
+  //   country: string;
+  //   image: string;
+  //   position: { top: string; left: string };
+  // }
   
-  const dataCentres: DataCentre[] = [
-    {
-      country: 'United States',
-      image: '/path/to/usa.png', // Update with the actual path to the image
-      position: { top: '50%', left: '20%' },
-    },
-    {
-      country: 'Mexico',
-      image: '/path/to/mexico.png', // Update with the actual path to the image
-      position: { top: '55%', left: '25%' },
-    },
-    {
-      country: 'Brazil',
-      image: '/path/to/brazil.png', // Update with the actual path to the image
-      position: { top: '65%', left: '35%' },
-    },
-    {
-      country: 'India',
-      image: '/path/to/india.png', // Update with the actual path to the image
-      position: { top: '50%', left: '70%' },
-    },
-    {
-      country: 'Russia',
-      image: '/path/to/russia.png', // Update with the actual path to the image
-      position: { top: '40%', left: '80%' },
-    },
-  ];
+  // const dataCentres: DataCentre[] = [
+  //   {
+  //     country: 'United States',
+  //     image: '/path/to/usa.png', // Update with the actual path to the image
+  //     position: { top: '50%', left: '20%' },
+  //   },
+  //   {
+  //     country: 'Mexico',
+  //     image: '/path/to/mexico.png', // Update with the actual path to the image
+  //     position: { top: '55%', left: '25%' },
+  //   },
+  //   {
+  //     country: 'Brazil',
+  //     image: '/path/to/brazil.png', // Update with the actual path to the image
+  //     position: { top: '65%', left: '35%' },
+  //   },
+  //   {
+  //     country: 'India',
+  //     image: '/path/to/india.png', // Update with the actual path to the image
+  //     position: { top: '50%', left: '70%' },
+  //   },
+  //   {
+  //     country: 'Russia',
+  //     image: '/path/to/russia.png', // Update with the actual path to the image
+  //     position: { top: '40%', left: '80%' },
+  //   },
+  // ];
  
   return (
     <div>
      
-     <NavigationMenuDemo/>
+     {/* <NavigationMenuDemo/> */}
       {/* <header> */}
         {/* <div NameNameNameNameName="header-top">
           <div classNameNameNameName="container">
@@ -220,7 +226,7 @@ const Home = () => {
         
 
 <main>
-    <div className="container">
+    {/* <div className="container">
       <img src="/img/Group.svg" alt=""/>
       <div className="hero-text">
         <h1>Secure and Reliable Hosting Services for Your Website Choose the Best Hosting Services</h1>
@@ -228,13 +234,15 @@ const Home = () => {
         </p>
         <button>Getting started</button>
       </div>
-    </div>
+    </div> */}
+
+    <Hero/>
   </main>
 
 
   {/* =====================Company-info-section======================= */}
 
-  <div className="container-companu-info" >
+  {/* <div className="container-companu-info" >
     <img src="/img/best-logo.png" alt="Logo" className="logo"/>
     <div className="content">
         <h1 className="header-company-info">Unmatched Speed: Turbocharge Your Website's Performance</h1>
@@ -243,7 +251,10 @@ const Home = () => {
             Our strong servers, powered by means of the ultra-modern hardware and software innovations, make certain highest quality overall performance on your internet site. With superior caching mechanisms, content material transport networks (CDNs), and smart load balancing, we reduce latency and maximize throughput, delivering an high-quality user revel in. Your traffic may be thrilled with the blazing-speedy loading times, ensuing in decreased leap fees and accelerated conversions.
         </p>
     </div>
-</div>
+</div> */}
+
+<AboutSection/>
+
 
       
 {/* ===========================Domain-search-section================== */}
@@ -266,94 +277,17 @@ const Home = () => {
 
 
 {/* ====================== pricing Section ===================== */}
-
-<div className="pricing-section">
-    <h2 className="pricing-header">Our Pricing Plans</h2>
-    <p className="pricing-description">Choose the plan that best fits your needs. We offer competitive pricing and top-notch features to enhance your online experience.</p>
-    <div className="price_table">
-  <div className="package package_free">
-    <h2>Free</h2>
-    <div className="price">£<div className="big">0</div>/mo</div>
-    <p>Sign up today for a free account and receive: </p>
-    <ul>
-      <li>1 email address</li>
-      <li>1GB of cloud storage</li>
-      <li>Realtime Backup</li>
-      <li>End-to-end encryption</li>
-      <li>Access to our mobile apps</li>
-    </ul>
-    <div className="choose-btn">
-      {/* <JAButton variant={'link'}>Choose Plan</JAButton> */}
-      <button>Choose Plan</button>
-    </div>
-  </div>
-
-  <div className="package package_bronze">
-    <div className="banner">Most Popular</div>
-    <h2>Bronze</h2>
-    <div className="price">£<div className="big">5</div>/mo</div>
-    <p>Includes everything in our Free package plus:</p>
-    <ul>
-      <li>5 email address</li>
-      <li>5GB of cloud storage</li>
-      <li>Two-factor authentication (2FA)</li>
-      <li>Unlimited access</li>
-      <li>VPN Lite</li>
-      <li>Premium Support</li>
-    </ul>
-    <div className="choose-btn">
-      {/* <JAButton variant={'link'}>Choose Plan</JAButton> */}
-      <button>Choose Plan</button>
-    </div>
-  </div>
-
-  <div className="package package_silver">
-    <h2>Silver</h2>
-    <div className="price">£<div className="big">10</div>/mo</div>
-    <p>Includes everything in our Bronze package plus:</p>
-    <ul>
-      <li>10 email address</li>
-      <li>50GB of cloud storage</li>
-      <li>File recovery</li>
-      <li>Advanced dashboard</li>
-      <li>Platinum Support</li>
-    </ul>
-    <div className="choose-btn">
-      {/* <JAButton variant={'link'}>Choose Plan</JAButton> */}
-      <button>Choose Plan</button>
-    </div>
-  </div>
-
-
-  <div className="package package_gold">
-    <h2>Gold</h2>
-    <div className="price">£<div className="big">15</div>/mo</div>
-    <p>Includes everything in our Silver package plus:</p>
-    <ul>
-      <li>20 email address</li>
-      <li>100GB of cloud storage</li>
-      <li>Priority support</li>
-      <li>VPN Pro</li>
-      <li>Advanced analytics</li>
-    </ul>
-    <div className="choose-btn">
-      {/* <JAButton variant={'link'}>Choose Plan</JAButton> */}
-      <button>Choose Plan</button>
-    </div>
-  </div>
-
-    </div>
-</div>
+<PriceSection/>
 
 
 {/* =========================secuirty feature section============================== */}
 
-<div className="feature-section">
+{/* <div className="feature-section">
     <div className="feature-image">
         <img src="https://png.pngtree.com/png-clipart/20200401/original/pngtree-modern-flat-design-concept-of-programmers-at-work-concept-software-development-png-image_5332896.jpg" alt="Vector Image"/>
     </div>
     <div className="feature-cards">
-    <header>
+    <header className='feature-header'>
   <h1 className='main-title'> We Provide Secure & Powerful Features </h1>
 </header>
 <main>
@@ -374,13 +308,14 @@ const Home = () => {
           </main>
 
     </div>
-</div>
+</div> */}
+<ServiceSection/>
 
 
 {/* ============================ why choose us ======================== */}
 
-<section id="about" className="about pt-0">
-      <div className="container" data-aos="fade-up">
+{/* <section id="about" className="about pt-0">
+      <div className="container-why" data-aos="fade-up">
         <div className="row  gy-4">
           <div className="col-lg-6 content order-first order-lg-first">
             <h3>Why Should You Choose Traumhosting?</h3>
@@ -415,7 +350,7 @@ support@rvtechnologies.in.net</p>
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
 
 
 
@@ -456,7 +391,7 @@ support@rvtechnologies.in.net</p>
       </p>
       <div className="image-container">
         <img 
-          src="/img/world-map.png" // Update with the actual path to your image
+          src="https://traumhosting.in/images/world-map.png" // Update with the actual path to your image
           alt="Global Data Centres" 
           className="full-width-image"
         />
@@ -499,8 +434,8 @@ support@rvtechnologies.in.net</p>
 
     {/* =========================faq section=================== */}
 
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
-      <h2 style={{marginBottom:'20px'}}>Frequently Asked Questions</h2>
+    <div style={{ maxWidth: '100%', margin: '0 auto', padding: '40px', border: '1px solid #ddd', borderRadius: '8px' }}>
+      <h2 style={{marginBottom:'20px',textAlign:'center',fontSize:'2rem'}}>Frequently Asked Questions</h2>
       {faqData.map((faq, index) => (
         <div key={index} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '4px', overflow: 'hidden' }}>
           <div
@@ -527,6 +462,10 @@ support@rvtechnologies.in.net</p>
           )}
         </div>
       ))}
+    </div>
+
+    <div>
+      <Footer/>
     </div>
 
 

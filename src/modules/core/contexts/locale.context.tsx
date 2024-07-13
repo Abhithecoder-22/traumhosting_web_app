@@ -1,33 +1,33 @@
-import en from '../../../i18n/en.json'
-import de from '../../../i18n/de.json'
-import { createContext, useContext, useEffect, useState } from 'react'
-import { IChildrenProp } from '../models/code.models'
-import { IntlProvider } from 'use-intl'
+// import en from '../../../i18n/en.json'
+// import de from '../../../i18n/de.json'
+// import { createContext, useContext, useEffect, useState } from 'react'
+// import { IChildrenProp } from '../models/code.models'
+// import { IntlProvider } from 'use-intl'
 
-const messages = {
-    en,
-    de
-}
+// const messages = {
+//     en,
+//     de
+// }
 
-const lang = localStorage.getItem('locale') || 'en'
+// const lang = localStorage.getItem('locale') || 'en'
 
-const LocaleContext = createContext(lang)
-export const useLocale = () => useContext(LocaleContext)
+// const LocaleContext = createContext(lang)
+// export const useLocale = () => useContext(LocaleContext)
 
-const LocaleProvider = ({children}: IChildrenProp) => {
-    const [locale, setLocale] = useState<string>(lang);
+// const LocaleProvider = ({children}: IChildrenProp) => {
+//     const [locale, setLocale] = useState<string>(lang);
 
-    useEffect(() => {
-        localStorage.setItem('locale', locale)
-    }, [locale]);
+//     useEffect(() => {
+//         localStorage.setItem('locale', locale)
+//     }, [locale]);
 
-    return (
-        <LocaleContext.Provider value={{ locale, setLocale }}>
-            <IntlProvider locale={locale} messages={messages[locale]}>
-                {children}
-            </IntlProvider>
-        </LocaleContext.Provider>
-    )
-}
+//     return (
+//         <LocaleContext.Provider value={{ locale, setLocale }}>
+//             <IntlProvider locale={locale} messages={messages[locale]}>
+//                 {children}
+//             </IntlProvider>
+//         </LocaleContext.Provider>
+//     )
+// }
 
-export default LocaleProvider;
+// export default LocaleProvider;

@@ -1,36 +1,36 @@
-import { Moon, Sun } from "lucide-react"
+// // import { Moon, Sun } from "lucide-react"
 
-import { Button } from "@shadcn/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@shadcn/components/ui/dropdown-menu"
-import { useTheme } from "../contexts/theme-provider"
-import { useLocale } from "../contexts/locale.context"
-import { useTranslations } from "use-intl"
+// import { Button } from "@shadcn/components/ui/button"
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuTrigger,
+// } from "@shadcn/components/ui/dropdown-menu"
+// // import { useTheme } from "../contexts/theme-provider"
+// import { useLocale } from "../contexts/locale.context"
+// import { useTranslations } from "use-intl"
 
-export function LanguageToggle() {
-  const { locale, setLocale } = useLocale()
-  const t = useTranslations()
+// export function LanguageToggle() {
+//   const { locale, setLocale } = useLocale()
+//   const t = useTranslations()
 
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          {locale.toUpperCase()}
-          <span className="sr-only">{t('change_language')}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setLocale("en")}>
-          English
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLocale("de")}>
-          Deutsch
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-}
+//   return (
+//     <DropdownMenu>
+//       <DropdownMenuTrigger asChild>
+//         <Button variant="outline" size="icon">
+//           {locale.toUpperCase()}
+//           <span className="sr-only">{t('change_language')}</span>
+//         </Button>
+//       </DropdownMenuTrigger>
+//       <DropdownMenuContent align="end">
+//         <DropdownMenuItem onClick={() => setLocale("en")}>
+//           English
+//         </DropdownMenuItem>
+//         <DropdownMenuItem onClick={() => setLocale("de")}>
+//           Deutsch
+//         </DropdownMenuItem>
+//       </DropdownMenuContent>
+//     </DropdownMenu>
+//   )
+// }
