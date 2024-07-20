@@ -12,7 +12,7 @@ interface SlideProps {
     className: string;
   }
 
-  const Slide: React.FC<SlideProps> = ({ title, description, imgSrc }) => (
+  const Slide: React.FC<SlideProps> = ({ title, description }) => (
     <div className="hero_area">
          <header className="header_section">
          <NavigationMenuDemo/>

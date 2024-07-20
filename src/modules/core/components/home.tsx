@@ -6,7 +6,7 @@ import Footer from './footer';
 import PriceSection from './pricing-section';
 import ServiceSection from './service-section';
 import AboutSection from './about';
-import Map from './map';
+// import Map from './map';
 import WorldMap from './map';
 import { ScrollAreaHorizontalDemo } from './scroll-img';
 

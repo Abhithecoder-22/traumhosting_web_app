@@ -45,7 +45,8 @@ import { Button } from "../../../shadcn/components/ui/button";
 //   },
 
 // ]
-type MenuItem = 'wordpress' | 'reseller' | 'shared' | 'item4' | 'item5' | 'item6' | 'item7' | 'item8' | 'item9' | 'item10' | 'item11' | 'item12';
+type MenuItem = 'wordpress' | 'reseller' | 'shared' | 'item4' | 'item5' | 'item6' | 'item7' | 'item8';
+
 export function NavigationMenuDemo() {
     const [isMobile,setIsMobile]=React.useState(false)
     const [isMenuOpen,setIsMenuOpen]=React.useState(false)
