@@ -6,7 +6,7 @@ body {
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 20px 0;
 }
 
 .layout_padding2 {
@@ -104,9 +104,12 @@ a:focus {
 
 /*header section*/
 .hero_area {
-  position: relative;
-  background-color: #020230;
+  position: relative; 
+  /* background-color: #020230; */
+  background: url(/public/assets/images/hero-2.png);
   min-height: 100vh;
+  background-size: cover;
+  transform: rotate(-360deg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,6 +118,7 @@ a:focus {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 
 .sub_page .hero_area {
   min-height: auto;
@@ -275,6 +279,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          
 }
 
 .slider_section #customCarousel1 {
@@ -284,6 +289,9 @@ a:focus {
 
 .slider_section .detail-box {
   color: #ffffff;
+  margin-top: 5rem;
+  /* block-size: 100dvh; */
+
 }
 
 .slider_section .detail-box h1 {
@@ -936,7 +944,7 @@ a:focus {
   color: #ffffff;
   border-radius: 100%;
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .info_section .info_social a:hover {

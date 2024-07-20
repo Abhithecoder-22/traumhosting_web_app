@@ -47,7 +47,7 @@ const PriceSection = () => {
         <section className="price_section layout_padding">
             <div className="container">
                 <div className="heading_container heading_center">
-                    <h2>Our Pricing</h2>
+                    <h4 className='text-2xl font-bold'>Our Pricing</h4>
                 </div>
                 <div className="price_container">
                     <div className="box">

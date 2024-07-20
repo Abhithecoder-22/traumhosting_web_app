@@ -45,7 +45,7 @@ import { Button } from "../../../shadcn/components/ui/button";
 //   },
 
 // ]
-
+type MenuItem = 'wordpress' | 'reseller' | 'shared' | 'item4' | 'item5' | 'item6' | 'item7' | 'item8' | 'item9' | 'item10' | 'item11' | 'item12';
 export function NavigationMenuDemo() {
     const [isMobile,setIsMobile]=React.useState(false)
     const [isMenuOpen,setIsMenuOpen]=React.useState(false)
@@ -62,192 +62,128 @@ export function NavigationMenuDemo() {
           window.removeEventListener('resize', handleResize);
         };
       }, []);
+
+      const [hoveredItem, setHoveredItem] = React.useState<MenuItem | ''>('');
+
+      // const [hoveredItem, setHoveredItem] = useState<MenuItem | ''>('');
+
+      const images: { [key in MenuItem]: string } = {
+        wordpress: 'https://www.ssldragon.com/wp-content/uploads/2023/05/web-hosting-trends.webp',
+        reseller: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShc1mNFcmNwZoFfCtNpE0daKnhRvD-3tps3Q&s',
+        shared: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiopL7E3AyV2cWFSYxFV_GHOmZz70HxrrPA1mweC_MkFwzm5AI-M4UmUKrE8N_4ZEiP2s&usqp=CAU',
+        item4: 'https://www.serverbasket.com/wp-content/uploads/2017/01/30-Days-Risk-Free-Tier-4-Data-Center-Dedicated-Servers-In-India.png',
+        item5: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_OjYdLIb1u-PF6-g1YSRz5MpGX0FvfzyqfA&s',
+        item6: 'https://w7.pngwing.com/pngs/246/478/png-transparent-web-hosting-service-internet-hosting-service-dedicated-hosting-service-reseller-web-hosting-web-hosting-computer-network-web-design-internet-thumbnail.png',
+        item7: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH-6ZBky2spliwe9MPr9XIBKoFLi_H9bEXOmJKXjIoP8MKsJ-KPFKa90ydZ4dQRgnh5Ek&usqp=CAU',
+        item8: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrHKJHJSLtMEwCr5DOnXYv7AbCw00D33V0g&s',
+
+      };
+    
+      const handleMouseEnter = (item: MenuItem) => {
+        setHoveredItem(item);
+      };
+    
+      const handleMouseLeave = () => {
+        setHoveredItem('');
+      };
+    
+      const menuItemsContent = [
+        {
+          menu: 'Hosting',
+          items: [
+            { title: 'Wordpress Hosting', description: 'Domain and hosting are two different things.', image: 'wordpress' },
+            { title: 'Reseller Hosting', description: 'Domain and hosting are two different things but equally important to build a website.', image: 'reseller' },
+          ]
+        },
+        {
+          menu: 'Hosting',
+          items: [
+            { title: 'Item4 Hosting', description: 'Some description for item 4.', image: 'item4' },
+            { title: 'Item5 Hosting', description: 'Some description for item 5.', image: 'item5' },
+          ]
+        },
+        {
+          menu: 'Hosting',
+          items: [
+            { title: 'Item7 Hosting', description: 'Some description for item 7.', image: 'item7' },
+            { title: 'Item8 Hosting', description: 'Some description for item 8.', image: 'item8' },
+          ]
+        },
+        {
+          menu: 'Hosting',
+          items: [
+            { title: 'Item10 Hosting', description: 'Some description for item 10.', image: 'item10' },
+            { title: 'Item11 Hosting', description: 'Some description for item 11.', image: 'item11' },
+          ]
+        }
+      ];
+    
   return (
-   <div className="flex justify-between items-center px-[1rem] py-[.6rem]">
-      <div className='logo_header'>
-          {/* <img
-            src='https://traumhosting.in/images/s1.png'
-            alt='logo'
-          /> */}
+    <nav className="nav">
+ <div className="flex justify-between items-center px-[.3rem] py-[.3rem] header-bg">
+      {/* <div className='logo_header'>
+        <a href="/">Traumhosting</a>
+      </div> */}
+      {
+        !isMobile &&(
+          <div className='btn text-black font-bold text-2xl'>
+            <a href="/">Traumhosting</a>
+          </div>
+        )
+      }
+      {
+        !isMobile && (
+          <NavigationMenu className="menu-list">
+            <NavigationMenuList className="flex gap-0 p-0 m-0">
+              {menuItemsContent.map((menuContent, index) => (
+                <NavigationMenuItem key={index} className="p-2 m-0">
+                  <NavigationMenuTrigger className="bg-transparent text-lg font-bold m-0 p-0">{menuContent.menu}</NavigationMenuTrigger>
+                  <NavigationMenuContent className="p-0 m-0">
+                    <ul className="grid gap-1 md:w-[800px] lg:w-[800px] lg:grid-cols-[.75fr_1fr]">
+                      <li className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <img
+                            src={hoveredItem ? images[hoveredItem] : 'https://www.ssldragon.com/wp-content/uploads/2023/05/web-hosting-trends.webp'}
+                            style={{ width: '100%', height: '300px' }}
+                            alt="Description of image"
+                            className="object-cover rounded-md h-full p-2  custom-header-img-width mb-[-1rem] ml-2 lg:ml-4"
+                          />
+                        </NavigationMenuLink>
+                      </li>
+                      {menuContent.items.map((item, idx) => (
+                        <ListItem
+                          key={idx}
+                          href="/docs"
+                          title={item.title}
+                          className="ml-2 lg:ml-4"
+                          onMouseEnter={() => handleMouseEnter(item.image as MenuItem)}
+                          onMouseLeave={handleMouseLeave}
+                        >
+                          {item.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+        )
+      }
+      {
+        !isMobile && (
+          <div className='btn'>
+            <Button variant='default' className='login_btn rounded-[5px] bg-[#ff0066] color-[#fff] px-[20px] py-[10px]'>Mailing System</Button>
+          </div>
+        )
+      }
+    </div>
+   {
+    isMobile && (
+      <div className='logo_header text-white'>
           <a href="/">Traumhosting</a>
         </div>
-   {
-    !isMobile && (
-        <NavigationMenu>
-        <NavigationMenuList className="gap-[1.5rem]">
-          {/* <NavigationMenuItem>
-            <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]  ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem> */}
-          <NavigationMenuItem>
-  <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
-  <NavigationMenuContent>
-    <ul className="grid gap-1 md:w-[800px] lg:w-[800px] lg:grid-cols-[.75fr_1fr]">
-      <li className="row-span-3">
-        <NavigationMenuLink asChild>
-          <img
-            src="https://www.ssldragon.com/wp-content/uploads/2023/05/web-hosting-trends.webp"
-            alt="Description of image"
-            className="object-cover rounded-md h-full custom-header-img-width mb-[-1rem] ml-2 lg:ml-4" // Adjust margin left for larger screens
-          />
-        </NavigationMenuLink>
-      </li>
-      <ListItem href="/docs" title="Wordpress Hosting" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things
-      </ListItem>
-      <ListItem href="/docs/installation" title="Reseller Hosting" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-      <ListItem href="/docs/primitives/typography" title="Shared Hosting" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-    </ul>
-  </NavigationMenuContent>
-</NavigationMenuItem>
-          <NavigationMenuItem>
-  <NavigationMenuTrigger>VPS Server</NavigationMenuTrigger>
-  <NavigationMenuContent>
-    <ul className="grid gap-1 md:w-[800px] lg:w-[800px] lg:grid-cols-[.75fr_1fr]">
-      <li className="row-span-3">
-        <NavigationMenuLink asChild>
-          <img
-            src="https://www.ssldragon.com/wp-content/uploads/2023/05/web-hosting-trends.webp"
-            alt="Description of image"
-            className="object-cover rounded-md h-full custom-header-img-width mb-[-1rem] ml-2 lg:ml-4" // Adjust margin left for larger screens
-          />
-        </NavigationMenuLink>
-      </li>
-      <ListItem href="/docs" title="Indian Server" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-      <ListItem href="/docs/installation" title="US Server" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-      <ListItem href="/docs/primitives/typography" title="German Server" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-    </ul>
-  </NavigationMenuContent>
-</NavigationMenuItem>
-          <NavigationMenuItem>
-  <NavigationMenuTrigger>Dedicated Server</NavigationMenuTrigger>
-  <NavigationMenuContent>
-    <ul className="grid gap-1 md:w-[800px] lg:w-[800px] lg:grid-cols-[.75fr_1fr]">
-      <li className="row-span-3">
-        <NavigationMenuLink asChild>
-          <img
-            src="https://www.ssldragon.com/wp-content/uploads/2023/05/web-hosting-trends.webp"
-            alt="Description of image"
-            className="object-cover rounded-md h-full custom-header-img-width mb-[-1rem] ml-2 lg:ml-4" // Adjust margin left for larger screens
-          />
-        </NavigationMenuLink>
-      </li>
-      <ListItem href="/docs" title="Indian Server" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-      <ListItem href="/docs/installation" title="German Server" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-
-    </ul>
-  </NavigationMenuContent>
-</NavigationMenuItem>
-          <NavigationMenuItem>
-  <NavigationMenuTrigger>Cloud Server</NavigationMenuTrigger>
-  <NavigationMenuContent>
-    <ul className="grid gap-1 md:w-[800px] lg:w-[800px] lg:grid-cols-[.75fr_1fr]">
-      <li className="row-span-3">
-        <NavigationMenuLink asChild>
-          <img
-            src="https://www.ssldragon.com/wp-content/uploads/2023/05/web-hosting-trends.webp"
-            alt="Description of image"
-            className="object-cover rounded-md h-full custom-header-img-width mb-[-1rem] ml-2 lg:ml-4" // Adjust margin left for larger screens
-          />
-        </NavigationMenuLink>
-      </li>
-      <ListItem href="/docs" title="Indian" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-      <ListItem href="/docs/installation" title="German" className="ml-2 lg:ml-4"> {/* Adjust margin left for larger screens */}
-      Domain and hosting are two different things but equally important to build a website.
-      </ListItem>
-     
-    </ul>
-  </NavigationMenuContent>
-</NavigationMenuItem>
-
-
-        </NavigationMenuList>
-      </NavigationMenu>
-    )
-   }
-   {
-    !isMobile && (
-        <div className='btn'>
-        <Button variant='default' className='login_btn rounded-[5px] bg-[#ff0066] color-[#fff] px-[20px] py-[10px]'>Mailing System</Button>
-      </div>
-    )
-   }
+    )}
    {
     isMobile && (
         <span
@@ -262,7 +198,7 @@ export function NavigationMenuDemo() {
    isMenuOpen={isMenuOpen}
    setIsMenuOpen={setIsMenuOpen}
    />
-   </div>
+   </nav>
   )
 }
 

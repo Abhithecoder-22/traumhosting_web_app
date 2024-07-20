@@ -6,6 +6,9 @@ import Footer from './footer';
 import PriceSection from './pricing-section';
 import ServiceSection from './service-section';
 import AboutSection from './about';
+import Map from './map';
+import WorldMap from './map';
+import { ScrollAreaHorizontalDemo } from './scroll-img';
 
 
 // interface CardProps {
@@ -311,6 +314,8 @@ const Home = () => {
 </div> */}
 <ServiceSection/>
 
+<ScrollAreaHorizontalDemo/>
+
 
 {/* ============================ why choose us ======================== */}
 
@@ -384,21 +389,21 @@ support@rvtechnologies.in.net</p>
 
     {/* =========================data center======================== */}
 
-    <section className="section-with-image">
+    {/* <section className="section-with-image">
       <h2>Our Global DataCentres</h2>
       <p>
         Global DataCentres: Empowering Businesses with Secure and Scalable Infrastructure. Experience the electricity of our cutting-edge records centers, handing over unrivaled reliability, superior security measures, and lightning-speedy connectivity. Our global network of facilities affords the inspiration for seamless statistics management, permitting agencies to thrive inside the virtual age. Explore our complete answers today.
       </p>
       <div className="image-container">
         <img 
-          src="https://traumhosting.in/images/world-map.png" // Update with the actual path to your image
+          src="/assets/images/world-map.png" 
           alt="Global Data Centres" 
           className="full-width-image"
         />
         <div className="flags-overlay">
           <div className="flag-item">
             <img 
-              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png" // Update with the actual path to your image
+              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png"
               alt="USA Flag" 
               className="flag-circle"
             />
@@ -406,7 +411,7 @@ support@rvtechnologies.in.net</p>
           </div>
           <div className="flag-item">
             <img 
-              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png" // Update with the actual path to your image
+              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png"
               alt="Mexico Flag" 
               className="flag-circle"
             />
@@ -414,7 +419,7 @@ support@rvtechnologies.in.net</p>
           </div>
           <div className="flag-item">
             <img 
-              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png" // Update with the actual path to your image
+              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png" 
               alt="Brazil Flag" 
               className="flag-circle"
             />
@@ -422,7 +427,7 @@ support@rvtechnologies.in.net</p>
           </div>
           <div className="flag-item">
             <img 
-              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png" // Update with the actual path to your image
+              src="https://vectorflags.s3-us-west-2.amazonaws.com/flags/in-circle-01.png"
               alt="India Flag" 
               className="flag-circle"
             />
@@ -430,7 +435,8 @@ support@rvtechnologies.in.net</p>
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
+    <div className='data-center m-2 p-2'><WorldMap/></div>
 
     {/* =========================faq section=================== */}
 
@@ -451,7 +457,7 @@ support@rvtechnologies.in.net</p>
             }}
           >
             <span>{faq.question}</span>
-            <span>{openIndex === index ? '-' : '+'}</span>
+            <span className='text-2xl font-bold'>{openIndex === index ? '-' : '+'}</span>
           </div>
           {openIndex === index && (
             <div style={{ padding: '10px', backgroundColor: '#fff' }}>
