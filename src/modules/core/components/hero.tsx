@@ -3,6 +3,7 @@ import '../../../assets/css/bootstrap.css';
 import '../../../assets/css/style.css'; 
 import '../../../assets/css/responsive.css'; 
 import { NavigationMenuDemo } from './header';
+import FirstHeader from './first-header';
 // import img from '../../../../public/assets/images/slider-img.png'
 
 interface SlideProps {
@@ -14,6 +15,9 @@ interface SlideProps {
 
   const Slide: React.FC<SlideProps> = ({ title, description }) => (
     <div className="hero_area">
+      <header>
+        <FirstHeader/>
+      </header>
          <header className="header_section">
          <NavigationMenuDemo/>
          </header>

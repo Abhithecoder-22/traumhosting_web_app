@@ -11,6 +11,7 @@ import WorldMap from './map';
 import { ScrollAreaHorizontalDemo } from './scroll-img';
 
 
+
 // interface CardProps {
 //   logo: string;
 //   title: string;
@@ -229,17 +230,9 @@ const Home = () => {
         
 
 <main>
-    {/* <div className="container">
-      <img src="/img/Group.svg" alt=""/>
-      <div className="hero-text">
-        <h1>Secure and Reliable Hosting Services for Your Website Choose the Best Hosting Services</h1>
-        <p>Reliable hosting offerings for seamless on line studies. Choose our excessive-overall performance answers for unbeatable uptime and fast loading speeds.
-        </p>
-        <button>Getting started</button>
-      </div>
-    </div> */}
 
     <Hero/>
+    {/* <HeroSection/> */}
   </main>
 
 

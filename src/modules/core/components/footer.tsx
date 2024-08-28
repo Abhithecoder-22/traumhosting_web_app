@@ -36,7 +36,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <h4 className='footer-title mt-2'>Social Media</h4>
+          {/* <h4 className='footer-title mt-2'>Social Media</h4>
           <div className="info_social">
             
             <a href="">
@@ -49,7 +49,7 @@ const Footer = () => {
             <i className="fa-brands fa-square-twitter"></i>
             </a>
            
-          </div>
+          </div> */}
         </div>
         <div className="col-md-6">
         <div className="link-container">
@@ -84,29 +84,38 @@ const Footer = () => {
     </div>
     <div className="link-box">
         <div className="info_link_box">
-            <h4 className='footer-title'>Hosting</h4>
+            <h4 className='footer-title'>Enterprise Service
+
+
+
+
+
+
+</h4>
 <div className="info_links">
     <a href="web-hosting.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Web Hosting
+        <img src="/assets/images/nav-bullet.png" alt="img"/> TS Plus Cloud
     </a>
     <a href="linux-hosting.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Linux Hosting
+        <img src="/assets/images/nav-bullet.png" alt="img"/> Mail Server
     </a>
     <a href="cheap-web-hosting.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Cheap Web Hosting
+        <img src="/assets/images/nav-bullet.png" alt="img"/> Tally VPS
     </a>
     <a href="windows-hosting.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Windows Hosting
+        <img src="/assets/images/nav-bullet.png" alt="img"/>Tally Dedicated Server
     </a>
-    <a href="java-hosting.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Java Hosting
+
+    <a href="linux-reseller-hosting.html">
+        <img src="/assets/images/nav-bullet.png" alt="img"/> Tally White Label Cloud
     </a>
     <a href="linux-reseller-hosting.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Linux Reseller Hosting
+        <img src="/assets/images/nav-bullet.png" alt="img"/>Window SQL Server
     </a>
-    <a href="windows-reseller-hosting.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Windows Reseller Hosting
+    <a href="linux-reseller-hosting.html">
+        <img src="/assets/images/nav-bullet.png" alt="img"/>ERP SYSTEM
     </a>
+
 </div>
 
 
@@ -123,9 +132,7 @@ const Footer = () => {
     <a href="ftp-storage.html">
         <img src="/assets/images/nav-bullet.png" alt="img"/> FTP Storage
     </a>
-    <a href="comet-backup.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Comet Backup
-    </a>
+
     <a href="cloud-storage.html">
         <img src="/assets/images/nav-bullet.png" alt="img"/> Cloud Storage
     </a>
@@ -143,6 +150,9 @@ const Footer = () => {
                 </a>
                 <a href="about.html">
                     <img src="/assets/images/nav-bullet.png" alt="img"/> Domain Transfer
+                </a>
+                <a href="about.html">
+                    <img src="/assets/images/nav-bullet.png" alt="img"/> Domain Price List
                 </a>
                
             </div>
@@ -171,23 +181,15 @@ const Footer = () => {
         <img src="/assets/images/nav-bullet.png" alt="img"/> GPU Servers
     </a>
     <a href="dedicated-server-mumbai.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server Mumbai
+        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server India
     </a>
     <a href="dedicated-server-chennai.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server Chennai
+        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server US
     </a>
     <a href="dedicated-server-delhi.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server Delhi
+        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server German
     </a>
-    <a href="dedicated-server-kolkata.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server Kolkata
-    </a>
-    <a href="dedicated-server-bangalore.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server Bangalore
-    </a>
-    <a href="dedicated-server-hyderabad.html">
-        <img src="/assets/images/nav-bullet.png" alt="img"/> Dedicated Server Hyderabad
-    </a>
+
 </div>
 
         </div>
@@ -243,10 +245,8 @@ const Footer = () => {
             <a href="hosting.html">Web Hosting</a>
             <span>|</span>
             <a href="blog.html">Blog</a>
-            <span>|</span>
-            <a href="ewebguru.html">eWebGuru Blog</a>
-            <span>|</span>
-            <a href="sitemap.html">Sitemap</a>
+  
+   
         </div>
         <div className="footer-payment">
             <img src="/assets/images/payment.png" alt="Payment Options"/>
