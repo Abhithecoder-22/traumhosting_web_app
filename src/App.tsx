@@ -14,10 +14,10 @@ function App() {
   return (
     <BrowserRouter>
    
-
+     
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/wordpres-hosting' element={<Wordpress/>}/>
+        <Route  path='/hosting' element={<Wordpress/>}/>
 
       </Routes>
   
