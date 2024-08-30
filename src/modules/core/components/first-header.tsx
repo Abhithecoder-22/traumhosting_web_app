@@ -14,7 +14,7 @@ const FirstHeader = () => {
           </div>
           <div className="flex items-center gap-4">
             <Link
-              to="#"
+              to="/wordpres-hosting"
               className="inline-flex h-8 items-center justify-center rounded-md bg-primary-foreground px-4 text-sm font-medium text-black shadow transition-colors hover:bg-primary/90 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           
             >
