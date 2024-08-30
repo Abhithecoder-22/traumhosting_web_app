@@ -17,7 +17,7 @@ function App() {
      
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route  path='/hosting' element={<Wordpress/>}/>
+        <Route  path='/wordpres-hosting' element={<Wordpress/>}/>
 
       </Routes>
   
