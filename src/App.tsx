@@ -16,7 +16,7 @@ function App() {
     <CountryTrack>
 
       <Routes>
-        <Route path='' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/wordpres-hosting' element={<Wordpress/>}/>
 
       </Routes>
