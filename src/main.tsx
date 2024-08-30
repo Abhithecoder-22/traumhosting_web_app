@@ -8,6 +8,8 @@ import { persistor, store } from './store/store.ts'
 import { ThemeProvider } from './modules/core/contexts/theme-provider.tsx'
 // import LocaleProvider from './modules/core/contexts/locale.context.tsx'
 import { TooltipProvider } from './shadcn/components/ui/tooltip.tsx'
+import CountryTrack from './modules/core/contexts/countryTrack'
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -16,7 +18,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
           {/* <LocaleProvider> */}
             <TooltipProvider>
-              <App />
+             <CountryTrack>
+             <App />
+             </CountryTrack>
             </TooltipProvider>
           {/* </LocaleProvider> */}
         </ThemeProvider>

@@ -5,7 +5,7 @@ import './App.css'
 // import { ModeToggle } from './modules/core/components/mode-switch'
 import Home from './modules/core/components/home'
 import Wordpress from './modules/core/components/wordpress'
-import CountryTrack from './modules/core/contexts/countryTrack'
+
 import { Routes,Route, BrowserRouter } from 'react-router-dom'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <CountryTrack>
+   
 
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -21,7 +21,7 @@ function App() {
 
       </Routes>
   
-      </CountryTrack>
+    
     </BrowserRouter>
   )
 }
