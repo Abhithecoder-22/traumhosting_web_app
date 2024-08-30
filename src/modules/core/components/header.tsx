@@ -19,7 +19,7 @@ import {  NavigationMenu,
     NavigationMenuList,
     NavigationMenuTrigger,
      } from "../../../shadcn/components/ui/navigation-menu"
-import { Button } from "../../../shadcn/components/ui/button";
+// import { Button } from "../../../shadcn/components/ui/button";
 
 // const components: { title: string; href: string; description: string; src: string }[] = [
 //   {
@@ -45,7 +45,7 @@ import { Button } from "../../../shadcn/components/ui/button";
 //   },
 
 // ]
-type MenuItem = 'domain1' | 'domain2' | 'w1' | 'w2' | 'VPS1' | 'VPS2' | 'VPS3' | 'D1' | 'D2'  | 'C1' | 'C2';
+// type MenuItem = 'domain1' | 'domain2' | 'w1' | 'w2' | 'VPS1' | 'VPS2' | 'VPS3' | 'D1' | 'D2'  | 'C1' | 'C2';
 
 export function NavigationMenuDemo() {
     const [isMobile,setIsMobile]=React.useState(false)
@@ -64,32 +64,32 @@ export function NavigationMenuDemo() {
         };
       }, []);
 
-      const [hoveredItem, setHoveredItem] = React.useState<MenuItem | ''>('');
+      // const [hoveredItem, setHoveredItem] = React.useState<MenuItem | ''>('');
 
       // const [hoveredItem, setHoveredItem] = useState<MenuItem | ''>('');
 
-      const images: { [key in MenuItem]: string } = {
-        domain1: 'https://plus.unsplash.com/premium_photo-1685086785423-435c02d5c321?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        domain2: 'https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        w1: 'https://img.freepik.com/free-photo/website-hosting-with-man-holding-tablet_23-2149406767.jpg?t=st=1723364398~exp=1723367998~hmac=a57da09e3b396b61d2ffeb04c3feb71c59966bf713076aeedf77b052276680cc&w=900',
-        w2: 'https://img.freepik.com/free-photo/website-hosting-concept-with-polygonal-shapes_23-2149406773.jpg?t=st=1723364418~exp=1723368018~hmac=27df5953531c3d2b615e4f608cfbb390985ac5c3f78146d54992705a8cb604df&w=1060',
-        VPS1: 'https://img.freepik.com/free-vector/server-concept-illustration_114360-287.jpg?t=st=1723364441~exp=1723368041~hmac=8fe4614205788adb5e2ac84b0cc71fc8abb89748ed9af08290f2677f2b32a1e7&w=740',
-        VPS2: 'https://img.freepik.com/free-vector/secure-server-concept-illustration_114360-522.jpg?t=st=1723364455~exp=1723368055~hmac=5257ffceb190ce4c506cc59080f9c19645467645494bb906810430f4fd0a5982&w=900',
-        VPS3: 'https://img.freepik.com/free-vector/cloud-hosting-concept-illustration_114360-4347.jpg?t=st=1723364477~exp=1723368077~hmac=fc66f456e2257a2a38ec256630a162eec48f9dc48690231772b4788a026bc1a9&w=900',
-        D1: 'https://img.freepik.com/premium-photo/graphic-visualization-bitcoin-storage-server-within-dedicated-equipment-space_850197-6405.jpg?w=1060',
-        D2: 'https://img.freepik.com/premium-photo/computer-with-circuit-board_850197-2492.jpg?w=1060',
-        C1: 'https://img.freepik.com/premium-photo/abstract-computer-circuit-with-cloud-computing-technology_1261838-4194.jpg?w=740',
-        C2: 'https://img.freepik.com/premium-photo/ctronic-chip-board-cloud-computer-is-system-transfer-data-information-andupload-download-application-technology_1261838-1266.jpg?w=740',
+      // const images: { [key in MenuItem]: string } = {
+      //   domain1: 'https://plus.unsplash.com/premium_photo-1685086785423-435c02d5c321?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      //   domain2: 'https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      //   w1: 'https://img.freepik.com/free-photo/website-hosting-with-man-holding-tablet_23-2149406767.jpg?t=st=1723364398~exp=1723367998~hmac=a57da09e3b396b61d2ffeb04c3feb71c59966bf713076aeedf77b052276680cc&w=900',
+      //   w2: 'https://img.freepik.com/free-photo/website-hosting-concept-with-polygonal-shapes_23-2149406773.jpg?t=st=1723364418~exp=1723368018~hmac=27df5953531c3d2b615e4f608cfbb390985ac5c3f78146d54992705a8cb604df&w=1060',
+      //   VPS1: 'https://img.freepik.com/free-vector/server-concept-illustration_114360-287.jpg?t=st=1723364441~exp=1723368041~hmac=8fe4614205788adb5e2ac84b0cc71fc8abb89748ed9af08290f2677f2b32a1e7&w=740',
+      //   VPS2: 'https://img.freepik.com/free-vector/secure-server-concept-illustration_114360-522.jpg?t=st=1723364455~exp=1723368055~hmac=5257ffceb190ce4c506cc59080f9c19645467645494bb906810430f4fd0a5982&w=900',
+      //   VPS3: 'https://img.freepik.com/free-vector/cloud-hosting-concept-illustration_114360-4347.jpg?t=st=1723364477~exp=1723368077~hmac=fc66f456e2257a2a38ec256630a162eec48f9dc48690231772b4788a026bc1a9&w=900',
+      //   D1: 'https://img.freepik.com/premium-photo/graphic-visualization-bitcoin-storage-server-within-dedicated-equipment-space_850197-6405.jpg?w=1060',
+      //   D2: 'https://img.freepik.com/premium-photo/computer-with-circuit-board_850197-2492.jpg?w=1060',
+      //   C1: 'https://img.freepik.com/premium-photo/abstract-computer-circuit-with-cloud-computing-technology_1261838-4194.jpg?w=740',
+      //   C2: 'https://img.freepik.com/premium-photo/ctronic-chip-board-cloud-computer-is-system-transfer-data-information-andupload-download-application-technology_1261838-1266.jpg?w=740',
 
-      };
+      // };
     
-      const handleMouseEnter = (item: MenuItem) => {
-        setHoveredItem(item);
-      };
+      // const handleMouseEnter = (item: MenuItem) => {
+      //   setHoveredItem(item);
+      // };
     
-      const handleMouseLeave = () => {
-        setHoveredItem('');
-      };
+      // const handleMouseLeave = () => {
+      //   setHoveredItem('');
+      // };
     
       const menuItemsContent = [
         {
@@ -246,8 +246,8 @@ export function NavigationMenuDemo() {
                 href="/docs"
                
                 className="ml-1 flex flex-col items-center w-96"
-                onMouseEnter={() => handleMouseEnter(item.image as MenuItem)}
-                onMouseLeave={handleMouseLeave}
+                
+                
               >
                 <div className="flex flex-col gap-[5px]">
                 <span className="font-bold text-black">{item.title}</span>
