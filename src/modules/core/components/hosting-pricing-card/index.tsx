@@ -18,8 +18,8 @@ const HostingPricingCard:React.FC<PricingCardProps> = ({ title, price, features,
           Most popular
         </span>
       </p>}
-      <h4 className="font-medium text-lg text-gray-800 dark:text-neutral-200">{title}</h4>
-      <span className="mt-5 font-bold text-2xl text-gray-800 dark:text-neutral-200">
+      <h4 className="font-medium text-lg text-gray-800 text-body-color">{title}</h4>
+      <span className="mt-5 font-bold text-2xl text-gray-800 text-body-color">
         <span className="font-bold text-2xl "></span>{price}
       </span>
       <p className="mt-2 text-sm text-gray-500 dark:text-neutral-500">Details about the plan</p>
@@ -29,7 +29,7 @@ const HostingPricingCard:React.FC<PricingCardProps> = ({ title, price, features,
             <svg className="shrink-0 mt-0.5 size-4 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12"/>
             </svg>
-            <span className="text-gray-800 dark:text-neutral-400">{feature}</span>
+            <span className="text-gray-800 dark:text-neutral-700">{feature}</span>
           </li>
         ))}
       </ul>
