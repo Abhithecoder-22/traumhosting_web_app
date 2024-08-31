@@ -9,6 +9,7 @@ import AboutSection from './about';
 // import Map from './map';
 import WorldMap from './map';
 import { ScrollAreaHorizontalDemo } from './scroll-img';
+// import FirstHeader from './first-header';
 
 
 
@@ -172,104 +173,17 @@ const Home = () => {
 
   const currentOption = options.find(option => option.name === selectedOption);
 
-  // interface DataCentre {
-  //   country: string;
-  //   image: string;
-  //   position: { top: string; left: string };
-  // }
-  
-  // const dataCentres: DataCentre[] = [
-  //   {
-  //     country: 'United States',
-  //     image: '/path/to/usa.png', // Update with the actual path to the image
-  //     position: { top: '50%', left: '20%' },
-  //   },
-  //   {
-  //     country: 'Mexico',
-  //     image: '/path/to/mexico.png', // Update with the actual path to the image
-  //     position: { top: '55%', left: '25%' },
-  //   },
-  //   {
-  //     country: 'Brazil',
-  //     image: '/path/to/brazil.png', // Update with the actual path to the image
-  //     position: { top: '65%', left: '35%' },
-  //   },
-  //   {
-  //     country: 'India',
-  //     image: '/path/to/india.png', // Update with the actual path to the image
-  //     position: { top: '50%', left: '70%' },
-  //   },
-  //   {
-  //     country: 'Russia',
-  //     image: '/path/to/russia.png', // Update with the actual path to the image
-  //     position: { top: '40%', left: '80%' },
-  //   },
-  // ];
  
   return (
     <div>
-     
-     {/* <NavigationMenuDemo/> */}
-      {/* <header> */}
-        {/* <div NameNameNameNameName="header-top">
-          <div classNameNameNameName="container">
-            <div classNameNameNameName="row">
-              <div classNameNameNameName="col-md-5 col-sm-12 right_info">
-                <p><i classNameNameNameName="fa fa-map-marker"></i> Tower T3, 7th Floor,
-                  739, Sector - Techzone-IV, Greter Noida</p>
-              </div>
-              <div classNameNameNameName="col-md-7 col-sm-12 left_info">
-                <ul>
-                  <li><i classNameNameNameName="fa fa-mobile-alt"></i><a href="#">+917048944596</a></li>
-                  <li><i classNameNameNameName="fa fa-envelope" aria-hidden="true"></i><a href="#">traumhosting@gmail.com</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        
-
 <main>
-
+<header>
+        {/* <FirstHeader/> */}
+      </header> 
     <Hero/>
-    {/* <HeroSection/> */}
   </main>
 
-
-  {/* =====================Company-info-section======================= */}
-
-  {/* <div className="container-companu-info" >
-    <img src="/img/best-logo.png" alt="Logo" className="logo"/>
-    <div className="content">
-        <h1 className="header-company-info">Unmatched Speed: Turbocharge Your Website's Performance</h1>
-        <p className="paragraph">
-            When it comes to <a href="" className='blue-txt'>hosting services</a> , pace is paramount. In contemporary rapid-paced virtual landscape, traffic expect lightning-fast loading instances, and search engines like google and yahoo prioritize high-performance web sites. At Traum Hosting, we understand the significance of velocity, that’s why we have invested heavily in contemporary infrastructure and contemporary technologies for <a href="" className='blue-txt'>hosting services</a>.
-            Our strong servers, powered by means of the ultra-modern hardware and software innovations, make certain highest quality overall performance on your internet site. With superior caching mechanisms, content material transport networks (CDNs), and smart load balancing, we reduce latency and maximize throughput, delivering an high-quality user revel in. Your traffic may be thrilled with the blazing-speedy loading times, ensuing in decreased leap fees and accelerated conversions.
-        </p>
-    </div>
-</div> */}
-
 <AboutSection/>
-
-
-      
-{/* ===========================Domain-search-section================== */}
-
-{/* <div className="search-section">
-    <h1 className="search-header">Do You Want Your Premium Domain?</h1>
-    <div className="search-box">
-        <input type="text" className="search-input" placeholder="Search..."/>
-        <button className="search-button">Enter Domain Name</button>
-    </div>
-    <div className="pricing">
-        <span><strong>.info</strong> $14.99</span>
-        <span><strong>.com</strong> $14.99</span>
-        <span><strong>.info</strong> $14.99</span>
-        <span><strong>.info</strong> $14.99</span>
-        <span><strong>.info</strong> $14.99</span>
-
-    </div>
-</div> */}
 
 
 {/* ====================== pricing Section ===================== */}
@@ -277,80 +191,9 @@ const Home = () => {
 
 
 {/* =========================secuirty feature section============================== */}
-
-{/* <div className="feature-section">
-    <div className="feature-image">
-        <img src="https://png.pngtree.com/png-clipart/20200401/original/pngtree-modern-flat-design-concept-of-programmers-at-work-concept-software-development-png-image_5332896.jpg" alt="Vector Image"/>
-    </div>
-    <div className="feature-cards">
-    <header className='feature-header'>
-  <h1 className='main-title'> We Provide Secure & Powerful Features </h1>
-</header>
-<main>
-            <section>
-
-              <div id="allCardsContainer">
-                {data.map((eachCard, index) => (
-                  <Card
-                    key={index}
-                    logo={eachCard.logo}
-                    title={eachCard.title}
-                    subTitle={eachCard.subTitle}
-                    description={eachCard.description}
-                  />
-                ))}
-              </div>
-            </section>
-          </main>
-
-    </div>
-</div> */}
 <ServiceSection/>
 
 <ScrollAreaHorizontalDemo/>
-
-
-{/* ============================ why choose us ======================== */}
-
-{/* <section id="about" className="about pt-0">
-      <div className="container-why" data-aos="fade-up">
-        <div className="row  gy-4">
-          <div className="col-lg-6 content order-first order-lg-first">
-            <h3>Why Should You Choose Traumhosting?</h3>
-           
-            <ul>
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i className="bi bi-diagram-3"></i>
-                <div>
-                  <h5>Award Winning Support</h5>
-                  <p>
-24/7 AWARD WINNING SUPPORT Our industry-leading experts are here to assist, every step of the way. Connect with us anytime at <br /> contact@rvtechnologies.in.net <br />
-support@rvtechnologies.in.net</p>
-                </div>
-              </li>
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i className="bi bi-fullscreen-exit"></i>
-                <div>
-                  <h5>Advanced Programming & Database</h5>
-                  <p>
-                  Build your website with advanced programming languages such as PHP, Apache, Curl, Python, MySQL, phpMyAdmin, Ruby on Rails and much more.</p>
-                </div>
-              </li>
-            
-            </ul>
-          </div>
-          <div className="col-lg-6 position-relative align-self-start order-last order-lg-last">
-            <img
-              src="https://prayagtandon.github.io/Omnifood-Project/Hero-section/img/hero.png"
-              className="img-fluid"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section> */}
-
-
 
 {/* =========================hosting section ===================== */}
 

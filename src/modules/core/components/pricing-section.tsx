@@ -7,6 +7,8 @@ import { Button } from '../../../shadcn/components/ui/button';
 import { CountryTrackContext } from '../contexts/countryTrack';
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios'
+// import Wordpress from '../pages/wordpress-hosting';
+import { useNavigate } from 'react-router-dom';
 
 const PriceSection = () => {
 
@@ -43,6 +45,8 @@ const PriceSection = () => {
         console.log("Current local state:", currentCountryTrack);
     }, [country.countryTrack, currentCountryTrack]);
 
+    const navigate = useNavigate()
+
     return (
         <section className="price_section layout_padding">
             <div className="container">
@@ -55,9 +59,9 @@ const PriceSection = () => {
                             <div className="top-box">
                                 <h2>
                                     {currentCountryTrack ? `₹` : `$`}
-                                    <span>49</span>
+                                    <span>150</span>
                                 </h2>
-                                <h6>Startup</h6>
+                                <h6>Wordpress</h6>
                                 <svg className="pricing-divider-img" enableBackground="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xmlSpace="preserve" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
                                     <path className="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
                   c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
@@ -70,13 +74,25 @@ const PriceSection = () => {
                                 </svg>
                             </div>
                             <ul className="price_features">
-                                <li><i className="fas fa-check"></i> 2GB RAM</li>
-                                <li><i className="fas fa-check"></i> 20GB SSD Cloud Storage</li>
-                                <li><i className="fas fa-check"></i> Weekly Backups</li>
-                                <li><i className="fas fa-check"></i> DDoS Protection</li>
-                                <li><i className="fas fa-check"></i> Full Root Access</li>
-                                <li><i className="fas fa-check"></i> 24/7/365 Tech Support</li>
-                                <Button variant='default' className='w-full' >See Detail</Button>
+                                <li><i className="fas fa-check"></i> 1 GB RAM
+
+</li>
+                                <li><i className="fas fa-check"></i> Host 1 Website</li>
+                                <li><i className="fas fa-check"></i> 2 GB NVMe SSD Storage
+                                </li>
+                                <li><i className="fas fa-check"></i> 10 GB Bandwidth
+                                </li>
+                                <li><i className="fas fa-check"></i> 1 Email Account
+                                </li>
+                                <li><i className="fas fa-check"></i> 1 MySQL Database
+                                </li>
+                                <li><i className="fas fa-check"></i> LiteSpeed Web Server
+
+                                </li>
+                                <li><i className="fas fa-check"></i> Free Let's Encrypt SSL
+
+                                </li>
+                                <Button onClick={()=> navigate('/wordpress-hosting') } variant='default' className='w-full' >See Detail</Button>
                             </ul>
                             
                         </div>
@@ -91,9 +107,9 @@ const PriceSection = () => {
                             <div className="top-box">
                                 <h2>
                                     {currentCountryTrack ? `₹` : `$`}
-                                    <span>69</span>
+                                    <span>3110</span>
                                 </h2>
-                                <h6>Standard</h6>
+                                <h6>VPS Server</h6>
                                 <svg className="pricing-divider-img" enableBackground="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xmlSpace="preserve" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
                                     <path className="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
                   c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
@@ -106,25 +122,30 @@ const PriceSection = () => {
                                 </svg>
                             </div>
                             <ul className="price_features">
-                                <li><i className="fas fa-check"></i> 4GB RAM</li>
-                                <li><i className="fas fa-check"></i> 50GB SSD Cloud Storage</li>
-                                <li><i className="fas fa-check"></i> Weekly Backups</li>
-                                <li><i className="fas fa-check"></i> DDoS Protection</li>
-                                <li><i className="fas fa-check"></i> Full Root Access</li>
-                                <li><i className="fas fa-check"></i> 24/7/365 Tech Support</li>
-                                <Button variant='default' className='w-full' >See Detail</Button>
+                                <li><i className="fas fa-check"></i> V4 Processor
+</li>
+                                <li><i className="fas fa-check"></i> 12 Core
+                                </li>
+                                <li><i className="fas fa-check"></i> 64 GB RAM
+                                </li>
+                                <li><i className="fas fa-check"></i> 1 TB SSD
+                                </li>
+                                <li><i className="fas fa-check"></i> 200 MBPS
+                                </li>
+                        
+                                <Button onClick={()=> navigate('/indian-vps-server')} variant='default' className='w-full mt-[6.5rem]' >See Detail</Button>
                             </ul>
                         </div>
-                   
+                      
                     </div>
                     <div className="box">
                         <div className="detail-box">
                             <div className="top-box">
                                 <h2>
                                     {currentCountryTrack ? `₹` : `$`}
-                                    <span>119</span>
+                                    <span>400</span>
                                 </h2>
-                                <h6>Business</h6>
+                                <h6>Reseller</h6>
                                 <svg className="pricing-divider-img" enableBackground="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xmlSpace="preserve" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
                                     <path className="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
                   c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
@@ -137,17 +158,28 @@ const PriceSection = () => {
                                 </svg>
                             </div>
                             <ul className="price_features">
-                                <li><i className="fas fa-check"></i> 8GB RAM</li>
-                                <li><i className="fas fa-check"></i> 100GB SSD Cloud Storage</li>
-                                <li><i className="fas fa-check"></i> Weekly Backups</li>
-                                <li><i className="fas fa-check"></i> DDoS Protection</li>
-                                <li><i className="fas fa-check"></i> Full Root Access</li>
-                                <li><i className="fas fa-check"></i> 24/7/365 Tech Support</li>
-                                <Button variant='default' className='w-full' >See Detail</Button>
+                                <li><i className="fas fa-check"></i> 10 cPanel Accounts
+</li>
+                                <li><i className="fas fa-check"></i> 25 GB NVMe SSD Storage
+                                </li>
+                                <li><i className="fas fa-check"></i> Unlimited Bandwidth
+                                </li>
+                                <li><i className="fas fa-check"></i> Free SSL Certificate
+                                </li>
+                                <li><i className="fas fa-check"></i> Free Website Backup
+
+                                </li>
+                                <li><i className="fas fa-check"></i> Unlimited Email Accounts
+                                </li>
+                                <li><i className="fas fa-check"></i> Unlimited MySQL DB's Choose Plan
+
+                                </li>
+                                <Button onClick={()=> navigate('/reseller-hosting')} variant='default' className='w-full mt-[.5rem]' >See Detail</Button>
                             </ul>
                         </div>
-                      
+                   
                     </div>
+                   
                 </div>
             </div>
         </section>

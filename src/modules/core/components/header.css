@@ -6,8 +6,8 @@
   /* text-align: left; */
   /* margin-top: 2rem; */
   background: white;
-
-  /* position: fixed; */
+width: 100%;
+  /* posiwidtion: fixed; */
   z-index: 1;
 
   /* gap: 0; */
@@ -43,7 +43,8 @@
   }
   @media (max-width:800px){
     .logo_header{
- margin-left: 2rem;
+ /* margin-left: 2rem; */
+ width: 100%;
     }
   }
   

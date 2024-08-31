@@ -1,4 +1,4 @@
-
+// 
 import { Brand } from "../../../types/brand";
 import brandsData from "./brandsData";
 

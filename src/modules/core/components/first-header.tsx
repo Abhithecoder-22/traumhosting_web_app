@@ -7,14 +7,18 @@ const FirstHeader = () => {
     <div>
       <header className="bg-primary text-primary-foreground py-2 px-4 md:px-6">
         <div className="container flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link to="#" className="text-base hover:underline" >
-              traumhosting@gmail.com
-            </Link>
-          </div>
+        <div className="flex items-center gap-4">
+  <a href="tel:+02269710308" className="text-base flex items-center gap-2 hover:underline">
+    <svg className="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 16.92v1.68a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1.68a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1zM4.11 7.68l.9-.88a1 1 0 0 1 1.42 0l2.59 2.59a1 1 0 0 1 0 1.42l-.88.9a1 1 0 0 1-1.42 0l-2.59-2.59a1 1 0 0 1 0-1.42zM20.88 7.68l-.88-.88a1 1 0 0 0-1.42 0l-2.59 2.59a1 1 0 0 0 0 1.42l.88.88a1 1 0 0 0 1.42 0l2.59-2.59a1 1 0 0 0 0-1.42z"/>
+    </svg>
+    <span>+022-697-10308</span>
+  </a>
+</div>
+
           <div className="flex items-center gap-4">
             <Link
-              to="/wordpres-hosting"
+              to="/help-and-support"
               className="inline-flex h-8 items-center justify-center rounded-md bg-primary-foreground px-4 text-sm font-medium text-black shadow transition-colors hover:bg-primary/90 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           
             >

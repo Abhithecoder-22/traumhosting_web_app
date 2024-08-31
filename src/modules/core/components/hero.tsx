@@ -17,9 +17,10 @@ interface SlideProps {
     <div className="hero_area">
       <header>
         <FirstHeader/>
+        <NavigationMenuDemo/>
       </header>
          <header className="header_section">
-         <NavigationMenuDemo/>
+         {/* <NavigationMenuDemo/> */}
          </header>
   <div className="carousel-item active ">
     <div className="container">
